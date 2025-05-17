@@ -54,7 +54,7 @@
  * @property {boolean} temp.isready - Indicates if the bot is ready.
  * @property {boolean} temp.started - Indicates if the bot has started.
  */
-
+require('dotenv').config();
 process.emitWarning = (warning, type) => {
     if (type === "DeprecationWarning") {
         return;
@@ -332,7 +332,7 @@ async function initializeBot() {
     });
 
     client.logger.warn("Bot", "Startup", "Logging in...");
-    await client.login(config.main.token);
+    await client.login(process.env.MAIN_TOKEN);
 
     if (config.extra.enable) {
         ["aliases", "commands"].forEach((x) => (extrac[x] = new Collection()));
