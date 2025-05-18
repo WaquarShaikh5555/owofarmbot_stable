@@ -70,13 +70,13 @@
         "discordrpc": false,
         "chatfeedback": true,
         "autophrases": true,
-        "autoresume": false,
+        "autoresume": true,
         "autojoingiveaways": false,
         "checklist": {
             "types": {
                 "daily": true,
                 "cookie": false,
-                "vote": false
+                "vote": true
             }
         },
         "inventory": {
