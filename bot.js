@@ -55,6 +55,19 @@
  * @property {boolean} temp.started - Indicates if the bot has started.
  */
 require('dotenv').config();
+
+const http = require('http');
+const port = process.env.PORT || 1243;  // Use Render's assigned PORT or fallback
+
+http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end('Bot is running');
+}).listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+// The rest of your bot code...
+
 process.emitWarning = (warning, type) => {
     if (type === "DeprecationWarning") {
         return;
