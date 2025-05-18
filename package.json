@@ -38,6 +38,7 @@
         "axios": "^1.8.4",
         "chalk": "^4.1.2",
         "discord.js-selfbot-v13": "^3.6.1",
+        "dotenv": "^16.5.0",
         "ejs": "^3.1.10",
         "express": "^5.1.0",
         "fs-extra": "^11.3.0",
